@@ -2,13 +2,11 @@ import {
   createSign,
   createVerify,
   generateKeyPair,
+  generateKeyPairSync,
 } from "node:crypto";
 import { CryptError } from "../utils/CryptError";
 
-export type DigSignOpts = Record<
-  "privateKey" | "publicKey",
-  string
->;
+export type DigSignOpts = Record<"privateKey" | "publicKey", string>;
 
 export type GenKeyPairResult = Record<"publicKey" | "privateKey", string>;
 
@@ -44,6 +42,14 @@ export class DigSign {
         }
       )
     );
+  }
+
+  static genKeyPairSync(): GenKeyPairResult {
+    return generateKeyPairSync("rsa", {
+      modulusLength: 2048,
+      publicKeyEncoding: { type: "spki", format: "pem" },
+      privateKeyEncoding: { type: "pkcs8", format: "pem" },
+    });
   }
 
   signData(data: string): string {
