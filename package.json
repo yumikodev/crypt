@@ -1,0 +1,27 @@
+{
+  "name": "@yumiko0828/crypt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "Crypto",
+    "Node",
+    "Cipher",
+    "Decipher",
+    "Digital",
+    "Signature"
+  ],
+  "author": "Yasu Yumiko",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.9.0",
+    "typescript": "5.2.2"
+  }
+}
