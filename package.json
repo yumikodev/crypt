@@ -1,7 +1,7 @@
 {
   "name": "@yumiko0828/crypt",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A personal module containing some utility functions from node:crypto.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

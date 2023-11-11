@@ -1,5 +1,4 @@
 import {
-  KeyObject,
   createSign,
   createVerify,
   generateKeyPair,
@@ -8,7 +7,7 @@ import { CryptError } from "../utils/CryptError";
 
 export type DigSignOpts = Record<
   "privateKey" | "publicKey",
-  string & Buffer & KeyObject
+  string
 >;
 
 export type GenKeyPairResult = Record<"publicKey" | "privateKey", string>;
